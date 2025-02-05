@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [navItem] = useState(navLink);
   const [open, setOpen] = useState(false);
-  console.log(open);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleMenuOpen = () => {
     setOpen(!open);
@@ -30,25 +30,17 @@ const Navbar = () => {
               }  md:flex items-center space-x-6 font-bold`}
             >
               {navItem.map((item, index) => (
-                <li className="inline-block my-0 mx-3 font-bold" key={index}>
+                <li
+                  className={`inline-block my-0 mx-3 font-bold ${
+                    activeIndex === index ? "text-black" : ""
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                  key={index}
+                >
                   <Link to={item.link}>{item.name}</Link>
                 </li>
               ))}
             </ul>
-            <div
-              className={`${
-                open ? "block" : "hidden"
-              } md:flex items-center space-x-2`}
-            >
-              <input
-                type="text"
-                placeholder="Search here..."
-                className="outline-none py-3 px-5 rounded font-bold"
-              />
-              <button className="outline-none bg-green-700 hover:bg-green-800 text-white py-3 px-5 rounded font-bold">
-                Search
-              </button>
-            </div>
           </>
           <div
             className="menu md:hidden block text-3xl fixed top-5 ml-8 right-7"

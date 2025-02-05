@@ -6,6 +6,9 @@ import TodoList from "./components/TodoList/TodoList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Clock from "./components/Clock/Clock";
 import Restaurent from "./components/RestaurentApp/Restaurent";
+import Todolistdelete from "./components/TodoListDeleteYeKaBia/TodoListDelete";
+import TodoListObj from "./components/TodoListObj/TodoListObj";
+import DynamicInputData from './components/DynamicInputData/DynamicInputData'
 
 function App() {
   const bgColor = "bgcolor";
@@ -24,6 +27,9 @@ function App() {
             <Route path="/todolist" exact element={<TodoList />} />
             <Route path="/clock" exact element={<Clock />} />
             <Route path="/restaurent" exact element={<Restaurent />} />
+            <Route path="/todolistdelete" exact element={<Todolistdelete />} />
+            <Route path="/todolistobj" exact element={<TodoListObj />} />
+            <Route path="/dynamicInputData" exact element={<DynamicInputData />} />
             <Route
               path="/bgChanger"
               exact

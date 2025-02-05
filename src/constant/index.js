@@ -17,5 +17,17 @@ const navLink = [
         link: "/restaurent",
         name: "Restaurent"
     },
+    {
+        link: "/todolistdelete",
+        name: "TodoListDelete"
+    },
+    {
+        link: "/todolistobj",
+        name: "TodoListObject"
+    },
+    {
+        link: "/dynamicInputData",
+        name: "DynamicInputData"
+    },
 ]
 export default navLink;
