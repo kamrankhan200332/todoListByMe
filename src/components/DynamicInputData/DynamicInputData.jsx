@@ -17,7 +17,6 @@ const InputProj = () => {
 
   let card = "card";
   const [store, setStore] = useState(getData());
-  console.log(store);
 
   const handleSubmit = () => {
     let { number, category, des } = state;
